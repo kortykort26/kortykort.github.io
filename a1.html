@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HAPPY VALENTINE'S DAY</title>
+    </head>
+    <body>
+        <audio id="bgMusic" autoplay muted loop>
+  <source src="only.wav" type="audio/wav">
+</audio>
+<center>
+<img src="noopy.gif" id="noopy" alt="" onclick="document.getElementById('dynamicText').textContent='HAPPY VALENTINES DAY!!!!!!';document.bgColor='#ff0000'">
+<h1 id="dynamicText">Click on snoopy!</h1>
+
+<script>
+            function changeText(){
+            const  myParagraph = document.getElementById('dynamicText');
+            myParagraph.textContent = "HAPPY VALENTINE'S DAY!!!!!!";
+            }
+            const myParagraph = document.getElementById('dynamicText');
+            myParagraph.classList.add('color');
+
+  document.addEventListener("click", function () {
+    const audio = document.getElementById("bgMusic");
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
+</script>
+</center>
+    </body>
+</html>
